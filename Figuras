@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main(){
+
+	int s, ta=1,r;
+
+	printf("INGRESE TAMAÑO DE LA FIGURA A: ");
+	scanf("%i",&s);
+
+	printf("\n");
+	  	for(int r=1; r<=s ; r++)
+		{
+		  for(int i=1; i<=ta ; i++)
+		  	{
+		  		printf("*");
+			}
+			printf("\n");
+			ta= ta+1;
+		}
+		printf("INGRESE TAMAÑO DE LA FIGURA B: ");
+	scanf("%i",&s);
+
+	printf("\n");
+	  	for(int r= 0; r<=s ; r++)
+		{
+		  for(int i= 2; i<=ta ; i++)
+		  	{
+		  		printf("*");
+			}
+			printf("\n");
+			ta= ta -1;
+		}
+
+
+
+	printf("INGRESE TAMAÑO DE LA FIGURA C ");
+	scanf("%i",&s);
+
+	printf("\n");
+
+	int ta1=1, esp=s-1;
+
+	  	for(int r=1; r<=s ; r++)
+	  	{
+		  for(int i=1; i<=esp ; i++)
+			printf(" ");
+
+		  for(int i=1; i<=ta1 ; i++)
+			printf("*");
+			printf("\n");
+			ta1= ta1+1;
+			esp= esp-1;
+		}
+		printf("INGRESE TAMAÑO DE LA FIGURA D: ");
+	scanf("%i",&s);
+
+	printf("\n");
+
+
+
+	  	for(int r=1; r<=s ; r++)
+	  	{
+		  for(int i=-1; i<=esp ; i++)
+			printf(" ");
+
+		  for(int i=2; i<=ta1 ; i++)
+			printf("*");
+			printf("\n");
+			ta1= ta1-1;
+			esp= esp+1;
+		}
+
+
+       return ;
+}
