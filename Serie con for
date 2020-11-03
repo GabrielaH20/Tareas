@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main( void )
+{
+
+int n,i,a=1,b=2,c=30,d=15;
+    printf("Ingresa la cantidad de numero que deseas ver de cada serie\n");
+    scanf("%d",&n);
+    printf("a)\t b)\tc)\td)");
+        for(i=1;i<=n;i++)
+        {
+
+            printf(" %d\t",a);
+               a+=2;
+             printf(" \n%d\t",b);
+             b+=3;
+              printf(" %d\t",c);
+              c-=10;
+              printf("%d\t",d);
+              d+=8;
+         }
+}
