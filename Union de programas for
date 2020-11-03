@@ -1,0 +1,132 @@
+#include <stdio.h>
+
+
+int main(){
+  int opc=0;
+    int i,j,v;
+    float pi=0;
+    v=1;
+    int s, ta=1,r;
+    int n,f,a=1,b=2,c=30,d=15;
+
+  while (opc!=4){
+
+    printf("\nElija una de estas opciones\n");
+    printf("1. Figuras\n");
+    printf("2. Valor de pi\n");
+    printf("3. Serie\n");
+    printf("4. Salir\n");
+    scanf("%d", &opc);
+
+  if (opc == 1) {
+printf("INGRESE TAMAÑO DE LA FIGURA A: ");
+	scanf("%i",&s);
+
+	printf("\n");
+	  	for(int r=1; r<=s ; r++)
+		{
+		  for(int i=1; i<=ta ; i++)
+		  	{
+		  		printf("*");
+			}
+			printf("\n");
+			ta= ta+1;
+		}
+		printf("INGRESE TAMAÑO DE LA FIGURA B: ");
+	scanf("%i",&s);
+
+	printf("\n");
+	  	for(int r= 0; r<=s ; r++)
+		{
+		  for(int i= 2; i<=ta ; i++)
+		  	{
+		  		printf("*");
+			}
+			printf("\n");
+			ta= ta -1;
+		}
+
+
+
+	printf("INGRESE TAMAÑO DE LA FIGURA C ");
+	scanf("%i",&s);
+
+	printf("\n");
+
+	int ta1=1, esp=s-1;
+
+	  	for(int r=1; r<=s ; r++)
+	  	{
+		  for(int i=1; i<=esp ; i++)
+			printf(" ");
+
+		  for(int i=1; i<=ta1 ; i++)
+			printf("*");
+			printf("\n");
+			ta1= ta1+1;
+			esp= esp-1;
+		}
+		printf("INGRESE TAMAÑO DE LA FIGURA D: ");
+	scanf("%i",&s);
+
+	printf("\n");
+
+
+
+	  	for(int r=1; r<=s ; r++)
+	  	{
+		  for(int i=-1; i<=esp ; i++)
+			printf(" ");
+
+		  for(int i=2; i<=ta1 ; i++)
+			printf("*");
+			printf("\n");
+			ta1= ta1-1;
+			esp= esp+1;
+		}
+
+
+
+  }
+
+  if (opc == 2) {
+
+    printf("\nValor de pi");
+    for(i=1,j=1; j<=100; i+=2, j++)
+    {
+        pi = pi +(4.0/i)* v;
+         printf("\n%-4d %f",j,pi);
+         v = -v;
+    }
+  }
+  if (opc == 3) {
+    printf("Ingresa la cantidad de numero que deseas ver de cada serie\n");
+    scanf("%d",&n);
+    printf("a)\t b)\tc)\td)\t");
+        for(f=1;f<=n;f++)
+        {
+
+            printf(" %d\t",a);
+               a+=2;
+             printf(" \n%d\t",b);
+             b+=3;
+              printf(" %d\t",c);
+              c-=10;
+              printf(" %d\t",d);
+              d+=8;
+         }
+  }
+  if (opc == 4) {
+    printf("Ha decidido salir\n");
+  }
+  if (opc >= 5) {
+    printf("Esta opción no esta disponible\n");
+  }
+  if (opc <= 0) {
+    printf("Esta opción no esta disponible\n");
+  }
+
+  };
+
+    return 0;
+}
