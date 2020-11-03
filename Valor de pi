@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,v;
+    float pi=0;
+    v=1;
+
+    printf("\nValor de pi");
+    for(i=1,j=1; j<=100; i+=2, j++)
+    {
+        pi = pi +(4.0/i)* v;
+         printf("\n%-4d %f",j,pi);
+         v = -v;
+    }
+
+
+    }
